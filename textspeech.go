@@ -47,13 +47,13 @@ func textspeech() {
         req := texttospeechpb.SynthesizeSpeechRequest{
                 // Set the text input to be synthesized.
                 Input: &texttospeechpb.SynthesisInput{
-                        InputSource: &texttospeechpb.SynthesisInput_Text{Text: "Friends, I've got something new to tell all of you. I've decided to sponsor a hockey team made up entirely of chimps. I'm tired of people telling me that chimps are not capable of kicking human ass in sports. Chimps are just superior athletes. I've got them on strict diet of bone broth and elk meat."},
+                        InputSource: &texttospeechpb.SynthesisInput_Text{Text: "I see trees of green, red roses too. I see them bloom for me and you. And I think to myself what a wonderful world. I see skies of blue and clouds of white. The bright blessed day, the dark sacred night. And I think to myself what a wonderful world"},
                 },
                 // Build the voice request, select the language code ("en-US") and the SSML
                 // voice gender ("neutral").
                 Voice: &texttospeechpb.VoiceSelectionParams{
                         LanguageCode: "en-US",
-                        SsmlGender:   texttospeechpb.SsmlVoiceGender_NEUTRAL,
+                        SsmlGender:   texttospeechpb.SsmlVoiceGender_FEMALE,
                 },
                 // Select the type of audio file you want returned.
                 AudioConfig: &texttospeechpb.AudioConfig{
